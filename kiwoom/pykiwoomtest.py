@@ -5,7 +5,20 @@ from PyQt5.QtTest import *
 import pandas as pd
 import sqlite3
 import datetime
-
+# 예측용 library들
+import os
+import tensorflow as tf
+# import pandas as pd
+import keras
+import numpy as np
+#from keras.layers import Embedding
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.layers import LSTM
+from sklearn.preprocessing import MinMaxScaler
+import matplotlib.pyplot as plt
+import math
+from sklearn.metrics import mean_squared_error
 
 
 #분봉 데이터 저장만 시도!!
@@ -167,6 +180,8 @@ class kiwoom2(QAxWidget):
         :param sPrevNext: 다음페이지가 있는지
         :return:
         """
+        # self.df = pd.DataFrame(columns= ['time', 'volume', 'info', 'open', 'high', 'low', 'adjusted'])
+        # print('self.df확인용')
         if sRQName == "예수금상세현황요청":
             deposit = self.dynamicCall("GetCommData(String, String, int, String)", sTrCode, sRQName, 0, "예수금")
             print("예수금 %s" % int(deposit))  # 41강
@@ -269,33 +284,48 @@ class kiwoom2(QAxWidget):
             code = code.split()
             print(code)
             # print("%s 분봉데이터 요청" % code)
-            df = pd.DataFrame(columns= ['time', 'volume', 'info', 'open', 'high', 'low', 'adjusted'])
-            print(df)
+            temp_df = pd.DataFrame(columns= ['time', 'volume', 'info', 'open', 'high', 'low', 'adjusted'])
+            print(len(temp_df))
             for i in range(cnt):
-                time = self.dynamicCall("CommGetData(QString, QString, QString, int, QString)", sTrCode, "", sRQName, i, "체결시간")
-                volume = self.dynamicCall("CommGetData(QString, QString, QString, int, QString)", sTrCode, "", sRQName, i, "거래량")
-                info = self.dynamicCall("CommGetData(QString, QString, QString, int, QString)", sTrCode, "", sRQName, i, "종목정보")
-                open = self.dynamicCall("CommGetData(QString, QString, QString, int, QString)", sTrCode, "", sRQName, i, "시가")
-                high = self.dynamicCall("CommGetData(QString, QString, QString, int, QString)", sTrCode, "", sRQName, i, "고가")
-                low = self.dynamicCall("CommGetData(QString, QString, QString, int, QString)", sTrCode, "", sRQName, i, "저가")
-                adjusted = self.dynamicCall("CommGetData(QString, QString, QString, int, QString)", sTrCode, "", sRQName, i, "수정주가구분")
+                self.time = self.dynamicCall("CommGetData(QString, QString, QString, int, QString)", sTrCode, "", sRQName, i, "체결시간")
+                self.volume = self.dynamicCall("CommGetData(QString, QString, QString, int, QString)", sTrCode, "", sRQName, i, "거래량")
+                self.info = self.dynamicCall("CommGetData(QString, QString, QString, int, QString)", sTrCode, "", sRQName, i, "종목정보")
+                self.open = self.dynamicCall("CommGetData(QString, QString, QString, int, QString)", sTrCode, "", sRQName, i, "시가")
+                self.high = self.dynamicCall("CommGetData(QString, QString, QString, int, QString)", sTrCode, "", sRQName, i, "고가")
+                self.low = self.dynamicCall("CommGetData(QString, QString, QString, int, QString)", sTrCode, "", sRQName, i, "저가")
+                self.adjusted = self.dynamicCall("CommGetData(QString, QString, QString, int, QString)", sTrCode, "", sRQName, i, "수정주가구분")
 
-                df.append(pd.Series([time, volume, info, open, high, low, adjusted], index=df.columns), ignore_index=True)
-                print("append확인용")
+                # dictionary 만들어서 dataframe으로 만들고 concat하기, index가 0으로 채워짐
+                for_df = pd.DataFrame({"time": [self.time], "volume": [self.volume],
+                                        "info": [self.info], "open": [self.open],
+                                        "high": [self.high], "low": [self.low],
+                                        "adjusted": [self.adjusted]}, index=None)
+                self.df = pd.concat([temp_df, for_df])
+                print("self.df의 길이: %s" % len(self.df))
+
+            print("concat확인용")
+            # 저장된 900열 df의 index 따로 지정 set_index
+            self.df.set_index('time')
 
             Dbpath = 'C:/Users/ilike/Database/'
             filename = 'samsung-minute'
-            print(filename)
-            df2 = df.sort_values(by=['time'], axis=0, ascending=True)
-            df3 = df2.set_index('time')
-            print(df3.head(4))
-            con = sqlite3.connect(Dbpath+filename + '%s.db' % rightnow)
-            df.to_sql(con, if_exists='append')
-            print("to_sql확인용")
-            con.close()
+            fileformat = '%s.csv' % rightnow
+
+            # print(filename)
+            # df2 = df.sort_values(by=['time'], axis=0, ascending=True)
+            # df2.to_csv(Dbpath+filename + fileformat, sep=',',na_rep='NaN')
+            print("저장확인용 %s 확인하기 string " % sPrevNext)
+
 
             if sPrevNext == "2":
                 print("prevnext=2확인용")
                 self.minute_kiwoom_db(code=code, sPrevNext=sPrevNext)
-            else:
+            else: #업데이트 할 내용이 없을 때
+                # Dbpath = 'C:/Users/ilike/Database/'
+                # filename = 'samsung-minute-'
+                # fileformat = '%s.csv' % rightnow
+                # print(filename)
+                # df2 = df.sort_values(by=['time'], axis=0, ascending=True)
+                # df2.to_csv(Dbpath + filename + fileformat, sep=',', na_rep='NaN')
+
                 self.calculator_event_loop.exit()
