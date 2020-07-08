@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa9e3bee-1825-4ebb-acd7-f9d1a42918f7" name="Default Changelist" comment="">
+    <list default="true" id="aa9e3bee-1825-4ebb-acd7-f9d1a42918f7" name="Default Changelist" comment="&quot;pikiwoom csv save and prediction_unfinished&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kiwoom/data_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/kiwoom/prediction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kiwoom/prediction.py" beforeDir="false" afterPath="$PROJECT_DIR$/kiwoom/prediction.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kiwoom/pykiwoomtest.py" beforeDir="false" afterPath="$PROJECT_DIR$/kiwoom/pykiwoomtest.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,7 +17,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui/ui.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
+            <state relative-caret-position="210">
               <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
@@ -38,7 +38,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kiwoom/kiwoom.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
+            <state relative-caret-position="3108">
               <caret line="213" selection-start-line="213" selection-end-line="213" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
@@ -49,13 +49,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kiwoom/prediction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="83" column="10" selection-start-line="83" selection-start-column="10" selection-end-line="83" selection-end-column="10" />
+            <state relative-caret-position="1302">
+              <caret line="74" selection-start-line="72" selection-end-line="74" />
               <folding>
-                <element signature="e#2#11#0" expanded="true" />
+                <element signature="e#20#29#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -70,15 +70,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kiwoom/pykiwoomtest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="319" column="32" lean-forward="true" selection-start-line="319" selection-start-column="32" selection-end-line="319" selection-end-column="32" />
+            <state relative-caret-position="261">
+              <caret line="297" column="45" selection-start-line="297" selection-start-column="45" selection-end-line="297" selection-end-column="45" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
-                <element signature="e#6063#6587#0" />
-                <element signature="e#6640#10174#0" />
               </folding>
             </state>
           </provider>
@@ -115,15 +113,15 @@
         <option value="$PROJECT_DIR$/pykiwoomtest.py" />
         <option value="$PROJECT_DIR$/ui/ui.py" />
         <option value="$PROJECT_DIR$/kiwoom/data_parser.py" />
-        <option value="$PROJECT_DIR$/kiwoom/pykiwoomtest.py" />
         <option value="$PROJECT_DIR$/kiwoom/prediction.py" />
+        <option value="$PROJECT_DIR$/kiwoom/pykiwoomtest.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="560" />
-    <option name="y" value="47" />
-    <option name="width" value="1155" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="5" />
+    <option name="y" value="9" />
+    <option name="width" value="1671" />
     <option name="height" value="1030" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -176,7 +174,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.prediction">
+  <component name="RunManager" selected="Python.__init__">
     <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="untitled2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -284,8 +282,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.prediction" />
         <item itemvalue="Python.__init__" />
+        <item itemvalue="Python.prediction" />
         <item itemvalue="Python.pykiwoomtest" />
         <item itemvalue="Python.kiwoom" />
         <item itemvalue="Python.data_harvest" />
@@ -317,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593745551539</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="&quot;dataframe append pykiwoomtest appended&quot;">
+      <created>1593825112272</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1593825112272</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -330,23 +335,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="5" y="9" width="1671" height="1030" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09571655" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.079335794" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4996215" visible="true" weight="0.32664436" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4996215" visible="true" weight="0.3455798" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39910814" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32998884" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49902725" weight="0.18394649" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3295063" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49902725" weight="0.1836969" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50097275" side_tool="true" weight="0.3283582" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.33556297" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.33524683" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -355,7 +360,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;dataframe append&quot;" />
     <MESSAGE value="&quot;dataframe append pykiwoomtest appended&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;dataframe append pykiwoomtest appended&quot;" />
+    <MESSAGE value="&quot;pikiwoom csv save and prediction_unfinished&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;pikiwoom csv save and prediction_unfinished&quot;" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/-859006670/builtins.py">
@@ -382,10 +388,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/errorCode.py">
+    <entry file="file://$PROJECT_DIR$/ui/ui.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+        <state relative-caret-position="210">
+          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -396,19 +405,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui/ui.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kiwoom/kiwoom.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
+        <state relative-caret-position="3108">
           <caret line="213" selection-start-line="213" selection-end-line="213" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
@@ -418,24 +417,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kiwoom/pykiwoomtest.py">
+    <entry file="file://$PROJECT_DIR$/kiwoom/prediction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="319" column="32" lean-forward="true" selection-start-line="319" selection-start-column="32" selection-end-line="319" selection-end-column="32" />
+        <state relative-caret-position="1302">
+          <caret line="74" selection-start-line="72" selection-end-line="74" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
-            <element signature="e#6063#6587#0" />
-            <element signature="e#6640#10174#0" />
+            <element signature="e#20#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kiwoom/prediction.py">
+    <entry file="file://$PROJECT_DIR$/config/errorCode.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="83" column="10" selection-start-line="83" selection-start-column="10" selection-end-line="83" selection-end-column="10" />
+        <state relative-caret-position="714">
+          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kiwoom/pykiwoomtest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="297" column="45" selection-start-line="297" selection-start-column="45" selection-end-line="297" selection-end-column="45" />
           <folding>
-            <element signature="e#2#11#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
